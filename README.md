@@ -7,24 +7,24 @@ It contains customer information from a bank, including key attributes that may 
 
 **Customer Demographics:**
 
-**Customer ID:** A unique identifier for each customer.
-\n **Surname:** The customer's surname or last name.
-\n **Age:** The customer's age.
-\n **Gender:** The customer's gender (Male or Female).
-\n **Geography:** The country where the customer resides (France, Spain or Germany).
+**Customer ID:** A unique identifier for each customer. 
+**Surname:** The customer's surname or last name.
+**Age:** The customer's age.
+**Gender:** The customer's gender (Male or Female).
+**Geography:** The country where the customer resides (France, Spain or Germany).
 
 **Financial Attributes:**
 
-\n**Balance:** The customer's account balance.
-\n**EstimatedSalary:** The estimated salary of the customer.
-\n**Credit Score:** A numerical value representing the customer's credit score.
-\n**NumOfProducts:** The number of bank products the customer uses (e.g., savings account, credit card).
+**Balance:** The customer's account balance.
+**EstimatedSalary:** The estimated salary of the customer.
+**Credit Score:** A numerical value representing the customer's credit score.
+**NumOfProducts:** The number of bank products the customer uses (e.g., savings account, credit card).
 
 **Customer Behavior:**
 
-\n**HasCrCard:** Whether the customer has a credit card (1 = yes, 0 = no).
-\n**IsActiveMember:** Whether the customer is an active member (1 = yes, 0 = no).
-\n**Tenure:** The number of years the customer has been with the bank.
+**HasCrCard:** Whether the customer has a credit card (1 = yes, 0 = no).
+**IsActiveMember:** Whether the customer is an active member (1 = yes, 0 = no).
+**Tenure:** The number of years the customer has been with the bank.
 
 **Target Variable:**
 
