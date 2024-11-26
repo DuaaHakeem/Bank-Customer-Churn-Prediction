@@ -23,7 +23,9 @@ It contains customer information from a bank, including key attributes that may 
 **Customer Behavior:**
 
 **HasCrCard:** Whether the customer has a credit card (1 = yes, 0 = no).
+
 **IsActiveMember:** Whether the customer is an active member (1 = yes, 0 = no).
+
 **Tenure:** The number of years the customer has been with the bank.
 
 **Target Variable:**
