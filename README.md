@@ -7,26 +7,26 @@ It contains customer information from a bank, including key attributes that may 
 
 **Customer Demographics:**
 
-**Customer ID:** A unique identifier for each customer
-**Surname:** The customer's surname or last name
+**Customer ID:** A unique identifier for each customer.
+**Surname:** The customer's surname or last name.
 **Age:** The customer's age.
-**Gender:** The customer's gender (Male or Female)
-**Geography:** The country where the customer resides (France, Spain or Germany)
+**Gender:** The customer's gender (Male or Female).
+**Geography:** The country where the customer resides (France, Spain or Germany).
 
-**Financial Attributes:******
+**Financial Attributes:**
 
-**Balance:** The customer's account balance
-**EstimatedSalary:** The estimated salary of the customer
-**Credit Score:** A numerical value representing the customer's credit score
-**NumOfProducts:** The number of bank products the customer uses (e.g., savings account, credit card)
+**Balance:** The customer's account balance.
+**EstimatedSalary:** The estimated salary of the customer.
+**Credit Score:** A numerical value representing the customer's credit score.
+**NumOfProducts:** The number of bank products the customer uses (e.g., savings account, credit card).
 
-Customer Behavior:
+**Customer Behavior:**
 
-**HasCrCard:** Whether the customer has a credit card (1 = yes, 0 = no)
-**IsActiveMember:** Whether the customer is an active member (1 = yes, 0 = no)
-**Tenure:** The number of years the customer has been with the bank
+**HasCrCard:** Whether the customer has a credit card (1 = yes, 0 = no).
+**IsActiveMember:** Whether the customer is an active member (1 = yes, 0 = no).
+**Tenure:** The number of years the customer has been with the bank.
 
-**Target Variable:******
+**Target Variable:**
 
 **Exited:** Whether the customer has churned (1 = yes, 0 = no)
 
@@ -44,6 +44,7 @@ By analyzing this dataset, the study aims to generate actionable insights to ass
 **Duplicate Records:** Two duplicate records were found.
 
 **2. Distribution of Features**
+
 **Age:** The Age column shows evidence of skewness, which may violate the assumptions of a logistic regression model. A data transformation might be necessary to address this issue and ensure the model's assumptions are met.
 **Gender:** The dataset contains a balanced proportion of male and female customers. However, female customers exhibited a slightly higher churn rate.
 
@@ -51,7 +52,7 @@ By observing the distrbution of numeric features across categories in target var
 
 **3. Financial Behavior**
 
-**Balance:**There is a high frequency of zero values in the Balance column, which may stands out as unusual. This was already noted during the review of the first 10 rows of data. Further investigation is required to understand why so many customers have a zero balance and how this correlates with other features.
+**Balance:** There is a high frequency of zero values in the Balance column, which may stands out as unusual. This was already noted during the review of the first 10 rows of data. Further investigation is required to understand why so many customers have a zero balance and how this correlates with other features.
 **Estimated Salary:** Salary distribution appeared uniform across the dataset, with no clear correlation to churn.
 **Number of Products:** Customers with one product had a higher tendency to churn, while those with multiple products were more likely to remain.
 
@@ -73,3 +74,17 @@ In this section, I apply feature engineering techniques to create new features b
 # Model Comparison
 In the phase, I trained machine learning models, including Logistic Regression, Decision Tree and Random Forest to identify the most effective model. The model that demonstrates the best initial performance will undergo hyperparameter tuning via GridSearchCV to further enhance its efficacy. I trained the models before and after data resampling to see how imbalance data can effect the model performance.
 
+**1. Logistic Regression:**
+ I used it as a baseline model for predicting customer churn.
+ **Model Performance:**
+ **Non-linear Relationships:** As observed during exploratory data analysis (EDA), many features exhibit non-linear relationships with the target variable (e.g., churn rate varying across tenure, balance, and activity levels). Logistic Regression, being a linear model, struggles to capture these complex patterns.
+ 
+**Class Imbalance:**
+The dataset is imbalanced, with a higher proportion of retained customers (class 0) compared to churned customers (class 1).
+As a result, the model is biased toward predicting the majority class, achieving high precision and recall for retained customers but failing to generalize for the minority class (churned customers). This is evident in the low recall (22%) and F1-score (31%) for the churned class.
+
+**2. Decision Tree:**
+The Decision Tree model demonstrates improved performance over Logistic Regression by capturing non-linear relationships in the data. However, its effectiveness is still impacted by the class imbalance, leading to suboptimal recall for the minority class.
+
+**3. Random Forest:**
+The Random Forest model outperforms both Logistic Regression and Decision Tree models in overall accuracy, precision, and F1-score. It demonstrates its capability to handle non-linear relationships effectively and performs better in predicting the minority class. However, class imbalance remains a challenge, especially for recall.
