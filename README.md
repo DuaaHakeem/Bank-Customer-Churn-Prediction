@@ -8,10 +8,10 @@ It contains customer information from a bank, including key attributes that may 
 **Customer Demographics:**
 
 **Customer ID:** A unique identifier for each customer.
-\n**Surname:** The customer's surname or last name.
-\n**Age:** The customer's age.
-\n**Gender:** The customer's gender (Male or Female).
-\n**Geography:** The country where the customer resides (France, Spain or Germany).
+\n **Surname:** The customer's surname or last name.
+\n **Age:** The customer's age.
+\n **Gender:** The customer's gender (Male or Female).
+\n **Geography:** The country where the customer resides (France, Spain or Germany).
 
 **Financial Attributes:**
 
