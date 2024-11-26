@@ -28,7 +28,7 @@ It contains customer information from a bank, including key attributes that may 
 
 **Target Variable:**
 
-**Exited:** Whether the customer has churned (1 = yes, 0 = no)
+**Exited:** Whether the customer has churned (1 = yes, 0 = no).
 
 This dataset provides a comprehensive view of the factors that may contribute to churn. With its mix of numerical and categorical features, it allows for exploratory data analysis, feature engineering, and the application of machine learning algorithms to predict customer churn.
 During the data preparation phase, missing values, outliers, and any imbalances in the target variable are addressed to ensure robust model training. Exploratory analysis is conducted to identify trends and correlations, helping uncover critical factors driving customer attrition.
@@ -88,3 +88,8 @@ The Decision Tree model demonstrates improved performance over Logistic Regressi
 
 **3. Random Forest:**
 The Random Forest model outperforms both Logistic Regression and Decision Tree models in overall accuracy, precision, and F1-score. It demonstrates its capability to handle non-linear relationships effectively and performs better in predicting the minority class. However, class imbalance remains a challenge, especially for recall.
+
+# Train models with Resampling:
+**Decision Tree:** The Resampled Decision Tree model demonstrates significant improvements in handling class imbalance, achieving balanced performance for both classes while maintaining high overall accuracy. It outperforms the original Decision Tree model in terms of fairness and effectiveness for the churned class.
+
+**Random Forest:** The Resampled Random Forest model stands out as the best-performing model overall, with high accuracy and balanced precision and recall for both classes. Its ability to capture non-linear relationships and mitigate class imbalance makes it highly effective for bank churn prediction.
